@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortable Grid</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://unpkg.com/htmx.org@2.0.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="/static/js/bliss.min.js"></script>
+    <script src="/static/js/script.js"></script>
+</head>
+<body>
+    <div id="binstack">
+        <div class="grid">
+            <div class="black-cell"></div>
+            <div class="cell">
+                <div class="button-row">
+                    <img src="/static/svg/down.svg">
+                    <img src="/static/svg/edit.svg">
+                    <img src="/static/svg/up.svg">
+                </div>
+                <textarea>Input text</textarea>
+            </div>
+            <textarea>Input text</textarea>
+            <textarea>Input text</textarea>
+            <textarea>Input text</textarea>
+            <div class="cell">
+                <p>Add</p>
+                <img src="/static/svg/add.svg">
+            </div>
+            <textarea>Input text</textarea>
+            <div class="cell">
+                <input type="checkbox">
+            </div>
+            <div class="cell">
+                <input type="checkbox">
+            </div>
+            <div class="cell">
+                <input type="checkbox">
+            </div>
+            <div class="cell">
+                <input type="checkbox">
+            </div>
+            <div class="black-cell"></div>
+            <textarea>Input text</textarea>
+        </div>
+    </div>
+    <form class="sortable" hx-post="/nope" hx-trigger="end">
+    </form>
+</body>
+</html>
